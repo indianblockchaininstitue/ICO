@@ -7,66 +7,6 @@
   
 }
 
-/* .App-logo {
-  height: 40vmin;
-}
-
-.header {
-  font-size: 32px;
-  color: darkslategray;
-  font-weight: 600;
-  text-align: center;
-}
-
-.smallHead {
-  font-size: 21px;
-  color: blue;
-  font-weight: 500;
-  text-align: center;
-}
-
-.warning {
-  margin: 10px 0px 10px 0px;
-  font-size: 15px;
-  color: darkred;
-  font-weight: 300;
-}
-
-.addField {
-  margin: 10px 0px 10px 0px;
-  padding: 8px;
-  background-color: white;
-  border: #b9b9b9 1px solid;
-  border-radius: 10px;
-}
-
-.kycHead {
-  font-size: 23px;
-  color: #005aff;
-  margin: 10px 0px 10px 0px;
-}
-
-.kycButton {
-  margin: 10px;
-  padding: 10px 30px 10px 30px;
-  border-radius: 30px;
-  border: solid #c7c1c1 1px;
-  background-color: #1467fff7;
-  color: white;
-  transition: 0.5s ease-in-out;
-}
-
-.kycButton:hover {
-  background-color: #353535f7;
-  cursor: pointer;
-}
-
-.buyAddress {
-  font-size: 18px;
-  font-weight: 400;
-  color: #0627a0;
-}*/
-
 .tokenNum {
   font-size: 18px;
   padding: 5px 10px 5px 8px;
@@ -74,33 +14,4 @@
   color: white;
   border-radius: 50px;
 }
-/*
-.tokenButton {
-  margin: 10px;
-  padding: 10px 30px 10px 30px;
-  border-radius: 30px;
-  border: solid #c7c1c1 1px;
-  background-color: #353535f7;
-  color: white;
-  transition: 0.5s ease-in-out;
-}
 
-.tokenButton:hover {
-  background-color: #1467fff7;
-  cursor: pointer;
-} */
-
-/* .App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
-} */
-
-/* .App-link {
-  color: #09d3ac;
-} */

@@ -1,69 +1,47 @@
-####Day1
-##project setup and Install dependencies
+# ICO
 
--install truffle - sudo npm install -g truffle
--install truffle box - truffle unbox react
--remove simple storage file
--remove 2\_ migration file
--delete both test files
 
-##import openzeppelin & Deploy a contract
+# Must have installation
+This app uses React, Solidity, Web3, MongoDB and NodeJS
+Works smoothly with windows 10 and above
+This app uses React, Solidity, Web3, MongoDB and NodeJS
+- [Node Js](https://nodejs.org/en/download/) - Network Architecture
+- [Truffle](https://www.trufflesuite.com/truffle) - Framework
+- [Ganache](https://www.trufflesuite.com/ganache) - Creation of Private Blockchain 
+- [React](https://reactjs.org/docs/getting-started.html) - Front-End 
+- [Solidity Ver 8+](https://docs.soliditylang.org/en/v0.8.4/) - Back-End 
+- [MetaMask](https://metamask.io/download) - Wallet & web3 provider 
 
--create initial package.json file(no spaces & no Capital words in folder name) : npm init
--import openzeppelin and add entry to package.json : npm install --save @openzeppelin/contracts
--create MyToken.sol (inside contracts folder)
--finish up writing token contract
+# For setup:
+1. At Root : Do `npm install`
+2. At client dir: Do `npm install`
 
-###Day2
-##contract deployment
+# To Run the project: 
+Ganache has to be running in the background
+1. At Root : Do `truffle migrate`
+2. At client dir: Do `npm run start`
 
--migrate contract to blockchain so create new file : 2_deploy_contracts.js
--finish up writing migration file (copy from 1_initial_migration.js)
--goto developer console (you'lll see a/c, private keys/mnemonic): truffle developer
--edit truffle-config.js and lock solidity version
--perform migration by saying : migrate
--replace solidity version as ^0.8.0 (if error occurs)
--to exit develoepr console : .exit
+### Connecting MetaMask to Dapp 
+1. Install the [MetaMask](https://metamask.io/download) browser extension
+2. Setup a new wallet account
+3. Go to Ganache and copy the `RPC Server` Address in the top panel
+   > You need this to import your Ganache Blockchain into MetaMask
+4. Go to MetaMask and click on the networks tab (This should be selected as Ethereum Mainnet or some testnet such as Rinkeby)
+5. Select `Custom RPC` in this tab at the bottom
+6. Enter the name of your choice, the `RPC Address` that you copied, and `1337` as the chain ID
+7. Other details should be auto-filled after entering the above details
+8. Click on save and you should have the Ganache network in your MetaMask now
+9. Then go to Ganache and click on the 🔑  on the right of the account number
+10. Copy the `Private Key` which would look something like this 
+  ```
+  357e626beea4019ee4ca96c1234ed52e390b71c6db0c64d15cdee1cc68a57aef
+  ```
+11. Now open MetaMask and click on your account image and click `Import account`
+12. Paste the copied private key in this and press on `Import`
+ > Note: The `Quickstart Ethereum` you started in Ganache is temporary and every account that was generated will be lost forever once you close Ganache. You will have to do the steps `9 to 12` every time you open ganache. You will have to save the Workspace in Ganache if you wish to prevent this.
+- Now reload the page
+- MetaMask should popup asking you to connect your account
+- If you connected successfully, your wallet address should be visible in the top right of the app. E.g.: `0xC9b87aeC184293A1D6d79806c8a0D70921090921`
 
-##adding unit testing(make sure to keep ganache running)
 
--weblink : https://github.com/OpenZeppelin/openzeppelin-test-helpers/blob/master/src/setup.js
--npm install --save chai chai-bn chai-as-promised : bn - big number (install all these)
--create a test file to write our first test : MyToken.test.js
--config truffle-config.js : add host,post and network from ganache (if test is failing) - if not no need to start ganache
--to execute testing (on truffle console) : test
--if test fails try running : (truffle compile) and then : (truffle test)
 
-###Day3
--weblink(crowdsale) : https://docs.openzeppelin.com/contracts/2.x/crowdsales
-##adding more tests
-
--add second and test case in : MyToken.test.js
--add crowdsale contract : copy from openzeppelin website(v 2.5.0)
--update all the imports
--create our token sale contarct on above imported contract as a inherited contract (perform truffle-flattener here)
--perform migration for newly created crowdsale contarct
--fix the test-case as we've transferred all the tokens from deployer's a/c to contract
-
-###Day4
--consolidating our config. into .env file - npm install --save dotenv
--create .env file - always recommended for keeping data consistent, uniform and safe in production
--write test-cases for crowdsale contract (copy initial config. code from previous test): MyTokenSale.test.js
--combine config. from all test files and add it to : setupchai.js
--for truffle suite error : add return stmt. in the last after all the test cases in both files
--for truffle suite error : 'npm uninstall -g truffle' and 'npm install -g truffle@5.1.10'
--add more test in Tokensale contract
-
-##Day5
--add KYC functionality - override prevalidate function from crowdsale contract also use Ownable form openzep : kycContract.so
--add into MyTokenSale.sol and migration.js
--update KYCtest in MyTokenSale.test.sol
-
-##Day6
--start working on front-end : app.js
--goto client folder : npm run start
-
-##Day 7
--KYC Whitelisting (frontend connection)
--meta mask connection
--setup RPC - Private network connection - use ganache
